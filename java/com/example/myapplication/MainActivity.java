@@ -3,16 +3,24 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private LinearLayout linearLayout1,linearLayout2,linearLayout3,linearLayout4;
     Fragment fragment1,fragment2,fragment3,fragment4;
     FragmentManager manager;
     int transaction;
+
+    /*private RecyclerView recyclerView;//add
+    private Myadapter myadapter;//add*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         linearLayout2.setOnClickListener(this);
         linearLayout3.setOnClickListener(this);
         linearLayout4.setOnClickListener(this);
+
     }
 
     public void onClick(View view){
